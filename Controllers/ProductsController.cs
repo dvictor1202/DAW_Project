@@ -8,7 +8,7 @@ using DavShop.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace DutchTreat.Controllers
+namespace   DavShop.Controllers
 {
   [Route("api/[Controller]")]
   [ApiController]

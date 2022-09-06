@@ -13,12 +13,13 @@ namespace DavShop.Data
   {
     public DavMappingProfile()
     {
-      CreateMap<Order, OrderViewModel>()
-        .ForMember(o => o.OrderId, ex => ex.MapFrom(i => i.Id))
-        .ReverseMap();
+        CreateMap<Order, OrderViewModel>()
+           .ForMember(o => o.OrderId, ex => ex.MapFrom(i => i.Id))
+           .ReverseMap();
 
-      CreateMap<OrderItem, OrderItemViewModel>()
-        .ReverseMap();
-    }
+        CreateMap<OrderItem, OrderItemViewModel>()
+            .ReverseMap()
+            .ForMember(m => m.Product, opt => opt.Ignore());
+        }
   }
 }
